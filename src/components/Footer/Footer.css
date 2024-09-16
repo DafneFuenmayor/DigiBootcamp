@@ -1,0 +1,36 @@
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #33333300; /* Cambiado a un color sólido para mejor visibilidad */
+  padding: 2rem;
+  min-height: 100px; /* Altura mínima para asegurar visibilidad */
+  width: 100%;
+ left: 0;
+}
+
+.f-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(153, 153, 153);
+  text-align: center;
+}
+
+.f-icons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1rem; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .f-content {
+    padding: 0; /* Opcional: Reduce el padding en pantallas pequeñas */
+  }
+}

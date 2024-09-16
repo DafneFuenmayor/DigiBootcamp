@@ -1,0 +1,163 @@
+/* Estilos generales */
+.Intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 6rem;
+  /* Aseguramos que el contenedor se ajuste a la pantalla */
+  overflow: hidden;
+}
+
+/* Estilos para la sección izquierda */
+.i-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+  /* Centra el contenido horizontalmente */
+  align-items: flex-start;
+}
+
+.i-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.i-name > :nth-child(1),
+.i-name > :nth-child(2) {
+  font-size: 3rem;
+  /* Ajusta el color según el modo oscuro */
+  color: var(--black);
+}
+
+.i-name > :nth-child(2) {
+  color: var(--orange);
+}
+
+.i-name > :nth-child(3) {
+  font-weight: 100;
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 10px;
+}
+
+.i-button {
+  width: 6rem;
+  height: 2rem;
+}
+
+/* Estilos para los íconos sociales */
+.i-icons {
+  margin-top: 0.1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.i-icons > * {
+  transform: scale(0.3);
+}
+
+.i-icons > *:hover {
+  cursor: pointer;
+}
+
+/* Estilos para la sección derecha */
+.i-right {
+  flex: 1;
+  position: relative;
+}
+
+/* Ajustes específicos para la imagen y animación */
+.i-right > * {
+  position: absolute;
+  z-index: 1;
+}
+
+.i-right > :nth-child(1) {
+  transform: scale(0.69);
+  left: -15%;
+  top: -9%;
+}
+
+.i-right > :nth-child(2) {
+  top: -4.6rem;
+  transform: scale(0.67);
+  left: -3rem;
+}
+
+.i-right > :nth-child(3) {
+  transform: scale(0.8);
+  left: -15%;
+  top: -28%;
+}
+
+.i-right > :nth-child(4) {
+  transform: scale(0.62);
+  top: -19%;
+  left: -24%;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* Estilos para el efecto de desenfoque */
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  z-index: -9;
+  top: -18%;
+  left: 56%;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 480px) {
+  .Intro {
+    flex-direction: column;
+    height: auto; /* Ajusta la altura al contenido */
+    margin-top: 3rem; /* Ajusta el margen superior */
+  }
+
+  .i-left {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+    gap: 1rem; /* Ajusta el espaciado */
+  }
+
+  .i-name > :nth-child(1),
+  .i-name > :nth-child(2) {
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+  }
+
+  .i-name > :nth-child(3) {
+    font-size: 12px; /* Ajusta el tamaño del texto */
+  }
+
+  .i-button {
+    width: auto; /* Ajusta el ancho del botón */
+    height: auto; /* Ajusta la altura del botón */
+    padding: 0.5rem 1rem; /* Ajusta el padding del botón */
+  }
+
+  .i-icons {
+    gap: 1rem; /* Ajusta el espaciado entre íconos */
+  }
+
+  .i-right {
+    position: relative;
+    transform: scale(0.9); /* Ajusta la escala de la imagen */
+    left: 0;
+    top: 0;
+    /* Ajusta la posición de la imagen */
+  }
+
+  .i-right > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .blur {
+    display: none; /* Oculta el efecto de desenfoque en pantallas pequeñas */
+  }
+}

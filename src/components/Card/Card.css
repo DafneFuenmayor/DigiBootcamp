@@ -1,0 +1,56 @@
+.card {
+  width: 20rem;
+  height: 17rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 10rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.26);
+  border: 7px solid var(--orangeCard);
+  box-shadow: var(--boxShadow);
+  border-radius: 20px;
+  padding: 0px 26px 2rem 26px;
+}
+.card span:nth-of-type(2) {
+  color: var(--gray);
+  font-size: 16px;
+}
+.card > img {
+  transform: scale(0.6);
+  margin-bottom: -2rem;
+}
+.c-button {
+    background: #FFFFFF;
+    box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #5290FD;
+}
+
+.c-button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90%; /* Ajusta el ancho de la tarjeta */
+    height: auto; /* Ajusta la altura */
+    margin: 1rem 0; /* Añade margen vertical */
+    padding: 1rem; /* Añade padding */
+  }
+
+  .card > img {
+    transform: scale(0.5); /* Ajusta el tamaño de la imagen */
+    margin-bottom: -1rem; /* Ajusta el margen inferior */
+  }
+
+  .c-button {
+    font-size: 14px; /* Ajusta el tamaño del texto del botón */
+    padding: 8px; /* Ajusta el padding del botón */
+  }
+}

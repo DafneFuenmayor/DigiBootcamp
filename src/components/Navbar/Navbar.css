@@ -1,0 +1,111 @@
+.n-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  top: 0;
+  position: relative;
+  padding: 0 1rem; /* Añade espacio a los lados */
+}
+
+.n-left {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+.n-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.n-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.n-list {
+  display: flex;
+  gap: 20rem;
+}
+
+.n-list ul {
+  display: flex;
+  gap: 1rem;
+  margin-right: 4rem;
+  list-style: none;
+}
+
+.n-list li {
+  cursor: pointer;
+}
+
+.n-list li:hover {
+  background-color: rgba(0, 23, 156, 0.158);
+  border-radius: 25%;
+}
+
+/* Estilos para los botones */
+.n-button {
+  flex: none;
+  margin-left: 1rem;
+}
+
+/* Estilo para el ícono de menú */
+.n-menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem; /* Aumenta el tamaño del ícono */
+}
+
+/* Ajustes para el menú desplegable en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .n-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 10vh; /* Alinea el menú justo debajo de la barra de navegación */
+    left: 0;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade sombra para mejorar la visibilidad */
+    padding: 1rem; /* Añade relleno alrededor del contenido */
+    z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+  }
+
+  .n-list.active {
+    display: flex;
+  }
+
+  .n-list ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0; /* Elimina el relleno por defecto de ul */
+  }
+
+  .n-list li {
+    padding: 0.5rem 1rem; /* Añade relleno para mejorar el espacio de clic */
+  }
+
+  .n-buttons {
+    display: none;
+  }
+
+  .n-menu-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .n-button {
+    margin-left: 0.5rem;
+  }
+}

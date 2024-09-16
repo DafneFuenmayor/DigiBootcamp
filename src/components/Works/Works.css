@@ -1,0 +1,224 @@
+/* Estilo general para la sección works */
+.works {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Ajusta la altura para adaptarse al contenido */
+  margin-top: 4rem;
+  position: relative;
+  background-color: #000; /* Fondo oscuro general */
+}
+
+/* Ajustes generales para las tarjetas de video */
+.video-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1c1c1c, #333);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Centramos la card */
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 10px 40px rgba(255, 255, 255, 0.2);
+}
+
+.video-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-description {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-description p {
+  color: white;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo de la sección left side */
+.awesome {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+}
+
+.awesome > :nth-child(1) {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.awesome > :nth-child(2) {
+  color: var(--orange);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.awesome > :nth-child(3) {
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.spane {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Botón */
+.button.s-button {
+  background-color: #1f80ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.s-button:hover {
+  background-color: #155fb2;
+}
+
+/* Estilo para el círculo principal */
+.w-mainCircle {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.w-mainCircle > * {
+  position: absolute;
+}
+
+.w-secCircle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  border: 5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: var(--smboxShadow);
+}
+
+.w-secCircle > img {
+  transform: scale(0.6);
+}
+
+.w-backCircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.blueCircle {
+  background: #1949b8;
+  left: 18rem;
+  top: 0rem;
+}
+
+.yellowCircle {
+  background: #f5c32c;
+  left: 18rem;
+  top: 8rem;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .works {
+    flex-direction: column;
+    height: auto; /* Ajusta la altura para adaptarse al contenido */
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .w-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8); /* Ajusta la escala para pantallas más pequeñas */
+  }
+
+  .w-mainCircle {
+    position: static;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .w-backCircle {
+    left: 0;
+    top: 0;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .w-secCircle {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video-card {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%; /* Asegura que la card se ajuste a la pantalla */
+  }
+
+  .video-card-content {
+    width: 100%;
+  }
+
+  .video-description {
+    padding: 8px;
+  }
+
+  .w-right {
+    transform: scale(0.6);
+  }
+
+  .w-mainCircle {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .w-backCircle {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .w-secCircle {
+    width: 3rem;
+    height: 3rem;
+  }
+}
