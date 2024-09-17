@@ -1,4 +1,3 @@
-/* Estilos generales del contenedor */
 .t-wrapper {
     padding: 0 3rem;
     height: 100vh;
@@ -11,10 +10,8 @@
     position: relative;
 }
 
-/* Estilos del encabezado */
 .t-heading {
     align-self: start;
-    text-align: center;
 }
 
 .t-heading > * {
@@ -26,7 +23,6 @@
     color: var(--orange);
 }
 
-/* Estilos de las sombras de fondo */
 .t-blur1 {
     left: 38rem;
     top: 16rem;
@@ -37,94 +33,72 @@
     left: 0;
 }
 
-/* Estilos de los testimonios */
 .testimonial {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Asegura que las tarjetas estén en una columna */
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem;
     width: 30rem;
     height: auto; /* Ajusta la altura automáticamente */
-    background: rgba(255, 255, 255, 0.116);
+    background: rgba(255, 255, 255, 0.26);
     border: 7px solid var(--blueCard);
     box-shadow: var(--boxShadow);
     border-radius: 20px;
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    text-align: center; /* Centra el texto */
+    margin: 1rem 0; /* Añade margen vertical para separar las tarjetas */
 }
 
 .testimonial > img {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 100%;
-    margin-bottom: 2rem; /* Espacio entre la imagen y el texto */
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%; /* Asegura que la imagen sea circular */
 }
 
 .testimonial > span {
     color: var(--gray);
-    font-size: 1rem; /* Ajusta el tamaño del texto */
-    line-height: 2; /* Mejora la legibilidad */
-    word-wrap: break-word; /* Permite el ajuste de palabras largas */
 }
 
-/* Estilos del slider */
 .t-wrapper .swiper {
     width: 100%;
-    height: 70%;
+    height: auto; /* Ajusta la altura automáticamente */
 }
 
+/* Ajusta el estilo del slide */
 .t-wrapper .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; /* Asegura que los elementos dentro del slide estén en columna */
 }
 
+/* Estilo para el bullet activo en la paginación del slider */
 .t-wrapper .swiper-pagination-bullet-active {
     background: var(--orange);
 }
 
-/* Estilos responsivos */
-@media screen and (max-width: 768px) {
-    .t-wrapper {
-        padding: 0 1rem;
-    }
-
-    .t-heading > * {
-        font-size: 1.5rem;
-    }
-
-    .testimonial {
-        width: 90%;
-        max-width: 25rem;
-    }
-
-    .testimonial > img {
-        width: 5rem;
-        height: 5rem;
-    }
-}
-
+/* Estilos responsivos para pantallas pequeñas */
 @media screen and (max-width: 480px) {
     .t-wrapper {
-        padding: 0 1rem;
-    }
-
-    .t-heading > * {
-        font-size: 1.2rem;
+        padding: 0;
     }
 
     .testimonial {
-        width: 90%;
-        max-width: 20rem;
+        width: 90%; /* Ajusta el ancho de las tarjetas */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin: 1rem auto; /* Añade margen vertical y centra horizontalmente */
+        padding: 1rem; /* Ajusta el padding */
     }
 
     .testimonial > img {
-        width: 4rem;
-        height: 4rem;
+        width: 70px; /* Ajusta el tamaño de la imagen */
+        height: 70px;
     }
 
-    .testimonial > span {
-        font-size: 0.9rem; /* Reduce el tamaño del texto para pantallas pequeñas */
+    .t-blur1, .t-blur2 {
+        display: none; /* Oculta los elementos de desenfoque en pantallas pequeñas */
+    }
+
+    .t-wrapper .swiper-slide {
+        flex-direction: column; /* Asegura que el contenido del slide esté en columna */
     }
 }

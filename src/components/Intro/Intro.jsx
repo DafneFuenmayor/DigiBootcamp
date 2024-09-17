@@ -38,9 +38,9 @@ BOOTCAMPS
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <img src=" "alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
         </div>
       </div>
       {/* right image side */}

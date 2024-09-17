@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 .n-wrapper {
   height: 10vh;
   display: flex;
@@ -6,17 +8,17 @@
   margin-bottom: 2rem;
   top: 0;
   position: relative;
-  padding: 0 1rem; /* Añade espacio a los lados */
+  padding: 0 1rem; 
 }
 
 .n-left {
   display: flex;
   align-items: center;
-  gap: 18rem;
+  gap: 1rem; /* Reduce el espacio entre el logo y el título */
 }
 
 .logo img {
-  width: 60px;
+  width: 85px;
   height: auto;
 }
 
@@ -34,7 +36,7 @@
 
 .n-list {
   display: flex;
-  gap: 20rem;
+  gap: 2rem; 
 }
 
 .n-list ul {
@@ -46,24 +48,34 @@
 
 .n-list li {
   cursor: pointer;
+  position: relative;
 }
 
 .n-list li:hover {
   background-color: rgba(0, 23, 156, 0.158);
   border-radius: 25%;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilos para los botones */
 .n-button {
   flex: none;
   margin-left: 1rem;
 }
 
-/* Estilo para el ícono de menú */
 .n-menu-icon {
   display: none;
   cursor: pointer;
-  font-size: 2rem; /* Aumenta el tamaño del ícono */
+  font-size: 2rem; 
+}
+
+/* Estilo para el ícono de cierre en el menú */
+.n-close-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem; /* Tamaño del ícono de cierre */
+  position: absolute;
+  top: 1rem; /* Ajusta según el diseño */
+  right: 5rem; /* Ajusta según el diseño */
 }
 
 /* Ajustes para el menú desplegable en dispositivos móviles */
@@ -71,28 +83,38 @@
   .n-list {
     display: none;
     flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 10vh; /* Alinea el menú justo debajo de la barra de navegación */
+    width: 100vw;
+    height: 50vh; 
+    position: fixed; 
+    top: 0;
     left: 0;
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade sombra para mejorar la visibilidad */
-    padding: 1rem; /* Añade relleno alrededor del contenido */
-    z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+    background: #424242c5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    padding: 1rem; 
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0; 
+    transform: translateY(-100%); 
   }
 
   .n-list.active {
     display: flex;
+    opacity: 1; /* Muestra el menú */
+    transform: translateY(0); /* Muestra el menú en pantalla */
   }
 
   .n-list ul {
     flex-direction: column;
-    gap: 1rem;
-    padding: 0; /* Elimina el relleno por defecto de ul */
+    gap: 1rem; /* Espaciado entre los elementos del menú */
+    padding: 0;
+    width: 100%; /* Asegúrate de que la lista ocupe todo el ancho */
+    text-align: center; /* Centra el texto */
   }
 
   .n-list li {
-    padding: 0.5rem 1rem; /* Añade relleno para mejorar el espacio de clic */
+    padding: 1rem 0; /* Añade más relleno para los elementos del menú */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    transition: background-color 0.3s ease; /* Transición suave */
   }
 
   .n-buttons {
@@ -101,6 +123,10 @@
 
   .n-menu-icon {
     display: block;
+  }
+
+  .n-close-icon {
+    display: block; /* Muestra el ícono de cierre */
   }
 }
 

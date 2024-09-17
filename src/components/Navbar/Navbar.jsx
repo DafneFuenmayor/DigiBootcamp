@@ -4,12 +4,17 @@ import "./Navbar.css";
 import { Link } from "react-scroll";
 import Digibootcamp from "../../img/Digibootcamp.png";
 import { FaBars, FaTimes } from "react-icons/fa"; // Importa íconos
+import { IoMdArrowBack } from "react-icons/io"; // Importa ícono de flecha
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
     setNavOpen(!navOpen);
+  };
+
+  const closeNav = () => {
+    setNavOpen(false);
   };
 
   return (
@@ -26,30 +31,30 @@ const Navbar = () => {
       <div className="n-right">
         <div className={`n-list ${navOpen ? 'active' : ''}`}>
           <ul>
-            <li>
+            <li onClick={closeNav}>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
                 Inicio
               </Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="services" spy={true} smooth={true}>
                 Campamento
               </Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="works" spy={true} smooth={true}>
                 Bootcamps
               </Link>
             </li>
-            <li>
+            <li onClick={closeNav}>
               <Link to="contact" spy={true} smooth={true}>
                 Boletín
               </Link>
             </li>
-            <li>
-             
-            </li>
           </ul>
+          <div className="n-close-icon" onClick={closeNav}>
+            <IoMdArrowBack size={30} />
+          </div>
         </div>
         <div className="n-buttons">
           <Link to="contact" spy={true} smooth={true}>
